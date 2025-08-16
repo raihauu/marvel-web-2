@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState , useMemo } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -31,10 +31,10 @@ function SortIcon({ direction }) {
 }
 
 export default function App() {
-  const [q, setQ] = useReactState("");
-  const [universe, setUniverse] = useReactState("All");
-  const [sort, setSort] = useReactState({ key: "id", direction: "asc" });
-  const [heroes, setHeroes] = useReactState(HEROES_DATA);
+  const [q, setQ] = useState("");
+  const [universe, setUniverse] = useState("All");
+  const [sort, setSort] = useState({ key: "id", direction: "asc" });
+  const [heroes, setHeroes] = useState(HEROES_DATA);
 
   const universes = useMemo(
     () => ["All", ...Array.from(new Set(HEROES_DATA.map((h) => h.universe)))],
