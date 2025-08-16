@@ -103,7 +103,6 @@ export default function App() {
       <div className="max-w-5xl mx-auto">
         <h1 className="text-3xl font-extrabold tracking-tight mb-6">Marvel Heroes – Table with Actions</h1>
 
-        {/* Controls */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
           <div className="sm:col-span-2">
             <label className="block text-xs uppercase tracking-wide text-neutral-400 mb-1">Search</label>
@@ -130,7 +129,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Add Hero Button */}
         <div className="mb-4 text-right">
           <button
             onClick={handleAdd}
@@ -140,7 +138,6 @@ export default function App() {
           </button>
         </div>
 
-        {/* Table */}
         <div className="overflow-hidden rounded-2xl border border-neutral-800 shadow-xl">
           <table className="w-full border-collapse">
             <thead className="bg-neutral-900/70">
